@@ -1,4 +1,4 @@
-package org.ntr.medium;
+package org.ntr.leetcode.medium;
 
 import java.util.concurrent.Semaphore;
 

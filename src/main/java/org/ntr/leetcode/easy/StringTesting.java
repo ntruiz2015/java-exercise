@@ -1,4 +1,4 @@
-package org.ntr.easy;
+package org.ntr.leetcode.easy;
 
 import java.util.HashMap;
 import java.util.List;
