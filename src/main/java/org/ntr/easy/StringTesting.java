@@ -1,4 +1,4 @@
-package org.example;
+package org.ntr.easy;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,28 +8,28 @@ public class StringTesting {
 
     private static int recResult = 0;
 
-    public static void main(String[] args) {
+    public static void main(java.lang.String[] args) {
 
         System.out.println("result: " + truncateSentence("What is the solution to this problem", 4));
     }
 
-    public static String truncateSentence(String s, int k) {
-        String[] arr = s.split(" ");
-        String[] res = new String[k];
+    public static java.lang.String truncateSentence(java.lang.String s, int k) {
+        java.lang.String[] arr = s.split(" ");
+        java.lang.String[] res = new java.lang.String[k];
         for (int i = 0; i < k; i++) {
             res[i] = arr[i];
         }
-        return String.join(" ", res);
+        return java.lang.String.join(" ", res);
     }
 
 
-    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-        Map<String, Integer> rm = new HashMap<>();
+    public static int countMatches(List<List<java.lang.String>> items, java.lang.String ruleKey, java.lang.String ruleValue) {
+        Map<java.lang.String, Integer> rm = new HashMap<>();
         rm.put("type", 0);
         rm.put("color", 1);
         rm.put("name", 2);
         int res = 0;
-        for (List<String> list : items) {
+        for (List<java.lang.String> list : items) {
             if (list.get(rm.get(ruleKey)).equals(ruleValue)) {
                 res++;
             }
@@ -38,16 +38,16 @@ public class StringTesting {
         return res;
     }
 
-    public static String restoreString(String s, int[] indices) {
+    public static java.lang.String restoreString(java.lang.String s, int[] indices) {
         int iL = indices.length;
         char[] res = new char[iL];
         for (int i = 0; i < iL; i++) {
             res[indices[i]] = s.charAt(i);
         }
-        return String.valueOf(res);
+        return java.lang.String.valueOf(res);
     }
 
-    public static int balancedStringSplit(String s) {
+    public static int balancedStringSplit(java.lang.String s) {
         int balance = 0;
         int result = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -64,9 +64,9 @@ public class StringTesting {
     }
 
 
-    public static int mostWordsFound(String[] sentences) {
+    public static int mostWordsFound(java.lang.String[] sentences) {
         int maxAmount = 0;
-        for (String sentence : sentences) {
+        for (java.lang.String sentence : sentences) {
             int sentenceLength = sentence.split(" ").length;
             if (maxAmount > sentenceLength) {
                 maxAmount = sentenceLength;
@@ -75,7 +75,7 @@ public class StringTesting {
         return maxAmount;
     }
 
-    public static String interpret(String command) {
+    public static java.lang.String interpret(java.lang.String command) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < command.length(); i++) {
             if (command.charAt(i) == 'G') {
@@ -93,7 +93,7 @@ public class StringTesting {
         return builder.toString();
     }
 
-    public static int numJewelsInStones(String jewels, String stones) {
+    public static int numJewelsInStones(java.lang.String jewels, java.lang.String stones) {
         int result = 0;
         for (int i = 0; i < stones.length(); i++) {
             if (jewels.indexOf(stones.charAt(i)) != -1) {
@@ -103,7 +103,7 @@ public class StringTesting {
         return result;
     }
 
-    public static int recNumJewelsInStones(String jewels, String stones) {
+    public static int recNumJewelsInStones(java.lang.String jewels, java.lang.String stones) {
         if (stones.length() == 0) return recResult;
         if (jewels.indexOf(stones.charAt(0)) != -1) {
             recResult++;
@@ -111,7 +111,7 @@ public class StringTesting {
         return recNumJewelsInStones(jewels, stones.substring(1));
     }
 
-    public static int finalValueAfterOperations(String[] operations) {
+    public static int finalValueAfterOperations(java.lang.String[] operations) {
         int result = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i].contains("-")) {
@@ -123,7 +123,7 @@ public class StringTesting {
         return result;
     }
 
-    public static String defangIPaddr(String address) {
+    public static java.lang.String defangIPaddr(java.lang.String address) {
         if (address.length() > 0) {
             return address.replace(".", "[.]");
         }
